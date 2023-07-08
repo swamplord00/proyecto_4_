@@ -7,7 +7,7 @@ export const NavBar = () => {
         <div className="container-fluid">
             <div className="container">
                 <NavLink className="navbar-brand" to="/">
-                    <img src="./src/images/ronin.png" alt="RoninSushi" width="60" height="60"/>
+                    <img src="/images/ronin.png" alt="RoninSushi" width="60" height="60"/>
                 </NavLink>
             </div>
           <button
