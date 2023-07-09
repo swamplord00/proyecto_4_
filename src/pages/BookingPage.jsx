@@ -2,7 +2,7 @@ import moment from "moment";
 
 import { useForm } from "../hooks/useForm";
 import { db } from "../firebase/firebase";
-import { useEffect} from "react";
+import { useEffect } from "react";
 import { useTable } from "../hooks/useTable";
 
 export const BookingPage = () => {
@@ -11,13 +11,10 @@ export const BookingPage = () => {
     email: "",
     fecha: "",
     comensales: "",
-    // ninios:'false'
   };
 
   const { formState, handleInputChange, onResetForm } = useForm(initialForm);
-  const{infoBookingArray,getDataForm}=useTable([])
-  
-  
+  const { infoBookingArray, getDataForm } = useTable([]);
 
   const onSubmit = async (eventSubmit) => {
     eventSubmit.preventDefault();
@@ -26,10 +23,10 @@ export const BookingPage = () => {
   };
 
   useEffect(() => {
-    getDataForm()
-    console.log(infoBookingArray)
-  }, [])
-  
+    getDataForm();
+    console.log(infoBookingArray);
+  }, []);
+
   return (
     <>
       <div className="card">
@@ -93,52 +90,38 @@ export const BookingPage = () => {
             onChange={handleInputChange}
           />
         </div>
-        <div className="mb-3 form-check">
-          {/* <input
-            type="checkbox"
-            className="form-check-input"
-            id="exampleCheck1"
-            name='ninios'
-            defaultChecked={formState.ninios}
-            onChange={()=>setFormState((state)=>{...state, state.ninios:!state.ninios})}
-          />
-          <label className="form-check-label" htmlFor="exampleCheck1">
-            ¿Silla para niños?
-          </label> */}
-        </div>
+        <div className="mb-3 form-check"></div>
         <button type="submit" className="btn btn-primary">
           Submit
         </button>
       </form>
-
-        <table className="table p-5 mt-5 table-responsive">
+      <div className="table-responsive-sm">
+        <table className="table p-5 mt-5 ">
           <thead>
             <tr>
-                <th>Nombre</th>
-                <th>Email</th>
-                <th>Fecha</th>
-                <th>Comensales</th>
-                <th>Acciones</th>
+              <th>Nombre</th>
+              <th>Email</th>
+              <th>Fecha</th>
+              <th>Comensales</th>
+              <th>Acciones</th>
             </tr>
           </thead>
           <tbody>
-            {
-                infoBookingArray.map((el)=>(
-                    <tr key={el.id}>
-                        <td>{el.nombre}</td>
-                        <td>{el.email}</td>
-                        <td>{el.fecha}</td>
-                        <td>{el.comensales}</td>
-                        <td>
-                            <button className="btn btn-danger">Eliminar</button>
-                            <button className="btn btn-info">Editar</button>
-                        </td>
-                    </tr>
-                ))
-            }
+            {infoBookingArray.map((el) => (
+              <tr key={el.id}>
+                <td>{el.nombre}</td>
+                <td>{el.email}</td>
+                <td>{el.fecha}</td>
+                <td>{el.comensales}</td>
+                <td>
+                  <button className="btn btn-danger">Eliminar</button>
+                  <button className="btn btn-info">Editar</button>
+                </td>
+              </tr>
+            ))}
           </tbody>
-        </table>   
-
+        </table>
+      </div>
     </>
   );
 };
