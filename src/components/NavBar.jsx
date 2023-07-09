@@ -47,6 +47,11 @@ export const NavBar = ({ usuario, setUsuario }) => {
                 </NavLink>
               </li>
               <li className="nav-item">
+                <NavLink className="nav-link" aria-current="page" to="/UsPage">
+                  Nosotros
+                </NavLink>
+              </li>
+              <li className="nav-item">
                 <NavLink className="nav-link" to="/menu">
                   Menú
                 </NavLink>
@@ -62,7 +67,7 @@ export const NavBar = ({ usuario, setUsuario }) => {
                   <img
                     src={usuario.photoURL}
                     alt="avatar"
-                    className="rounded-circle w-25 h-25"
+                    className="rounded-circle img-fluid img-thumbnail "
                   />
                   <li className="nav-item">{usuario.displayName}</li>
                   <li className="nav-item" onClick={onLogOut}>
