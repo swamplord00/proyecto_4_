@@ -111,7 +111,7 @@ export const BookingPage = () => {
         </button>
       </form>
 
-        <table className="table p-5 mt-5">
+        <table className="table p-5 mt-5 table-responsive">
           <thead>
             <tr>
                 <th>Nombre</th>
