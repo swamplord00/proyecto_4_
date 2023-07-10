@@ -63,15 +63,15 @@ export const MenuPage = () => {
         <div className="card d-flex justify-content-center flex-wrap bg-dark text-light m-2 p-2">
           <h4 id="scrollspyHeading1">Promo Ronin katana</h4>
           <div className="d-flex justify-content-center flex-wrap gap-2 ">
-            <div>
-              <img
+            <div >
+              <img 
                 src="/images/promo1.jpg"
-                className="rounded float-start"
+                className="img-fluid"
                 alt="promo1"
               />
             </div>
 
-            <div className="card w-50 p-5 bg-secondary bg-gradient text-light">
+            <div className="card w-50 p-1 bg-secondary bg-gradient text-light">
               <p>(40 piezas mixtas)</p>
               <p>Precio :$20.000</p>
               <ul>
@@ -87,14 +87,14 @@ export const MenuPage = () => {
         <div className="card d-flex justify-content-center flex-wrap bg-dark text-light m-2 p-2">
           <h4 id="scrollspyHeading2">Promo Ronin kodashi</h4>
           <div className="d-flex justify-content-center flex-wrap gap-2">
-            <div>
+            <div className="img-fluid">
               <img
                 src="/images/promo2.jpg"
-                className="rounded float-start"
+                className="img-fluid"
                 alt="promo2"
               />
             </div>
-            <div className="card w-50 p-5 bg-secondary bg-gradient text-light">
+            <div className="card w-50 p-1 bg-secondary bg-gradient text-light">
               <p>(60 piezas mixtas)</p>
               <p>Precio :$28.000</p>
               <ul>
@@ -128,14 +128,14 @@ export const MenuPage = () => {
         <div className="card d-flex justify-content-center flex-wrap bg-dark text-light m-2 p-2">
           <h4 id="scrollspyHeading3">Nigiris</h4>
           <div className="d-flex justify-content-center flex-wrap gap-2">
-            <div>
+            <div className="img-fluid">
               <img
                 src="/images/nigiri.jpg"
-                className="rounded float-start"
+                className="img-fluid"
                 alt="nigiri"
               />
             </div>
-            <div className="card w-50 p-5 bg-secondary bg-gradient text-light">
+            <div className="card w-50 p-1 bg-secondary bg-gradient text-light">
               <p>(mix 8 piezas)</p>
               <p>Precio :$7.000</p>
             </div>
@@ -145,14 +145,14 @@ export const MenuPage = () => {
         <div className="card d-flex justify-content-center flex-wrap bg-dark text-light m-2 p-2">
           <h4 id="scrollspyHeading4">Avocados</h4>
           <div className="d-flex justify-content-center flex-wrap gap-2">
-            <div>
+            <div className="img-fluid">
               <img
                 src="/images/avocado.jpg"
-                className="rounded float-start"
+                className="img-fluid"
                 alt="avocado"
               />
             </div>
-            <div className="card w-50 p-5 bg-secondary bg-gradient text-light">
+            <div className="card w-50 p-1 bg-secondary bg-gradient text-light">
               <p>(8 piezas pollo-queso envuelto en palta)</p>
               <p>Precio :$8.000</p>
             </div>
@@ -163,14 +163,15 @@ export const MenuPage = () => {
           <h4 id="scrollspyHeading5">Tempuras</h4>
 
           <div className="d-flex justify-content-center flex-wrap gap-2">
-            <div>
+            <div className="img-fluid">
               <img
                 src="/images/tempura.jpg"
-                className="rounded float-start"
+                className="img-fluid"
                 alt="tempura"
+                
               />
             </div>
-            <div className="card w-50 p-5 bg-secondary bg-gradient text-light">
+            <div className="card w-50 p-1 bg-secondary bg-gradient text-light">
               <p>(8 piezas pollo teriyaki-queso-nori en tempura )</p>
               <p>Precio :$8.500</p>
             </div>
