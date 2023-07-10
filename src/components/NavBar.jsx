@@ -41,9 +41,10 @@ export const NavBar = ({ usuario, setUsuario }) => {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 align-items-center lp-1">
+              
               <li className="nav-item">
                 <NavLink className="nav-link" aria-current="page" to="/">
-                  Inicio
+                Inicio
                 </NavLink>
               </li>
               <li className="nav-item">
@@ -51,6 +52,7 @@ export const NavBar = ({ usuario, setUsuario }) => {
                   Nosotros
                 </NavLink>
               </li>
+              <li>🀤</li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/menu">
                   Menú
@@ -80,7 +82,7 @@ export const NavBar = ({ usuario, setUsuario }) => {
                 </>
               ) : (
                 <li className="nav-item" onClick={onLogin}>
-                  <a className="nav-link">Login</a>
+                  <a className="nav-link text-success">Login</a>
                 </li>
               )}
               

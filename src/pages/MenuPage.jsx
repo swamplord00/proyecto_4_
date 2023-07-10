@@ -63,8 +63,8 @@ export const MenuPage = () => {
         <div className="card d-flex justify-content-center flex-wrap bg-dark text-light m-2 p-2">
           <h4 id="scrollspyHeading1">Promo Ronin katana</h4>
           <div className="d-flex justify-content-center flex-wrap gap-2 ">
-            <div >
-              <img 
+            <div>
+              <img
                 src="/images/promo1.jpg"
                 className="img-fluid"
                 alt="promo1"
@@ -168,7 +168,6 @@ export const MenuPage = () => {
                 src="/images/tempura.jpg"
                 className="img-fluid"
                 alt="tempura"
-                
               />
             </div>
             <div className="card flex-fill p-1 bg-secondary bg-gradient text-light">

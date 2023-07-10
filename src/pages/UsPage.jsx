@@ -18,9 +18,10 @@ export const UsPage = () => {
             <div className="container-fluid py-5">
               <h1 className="display-5 fw-bold">Historia</h1>
               <p className="col-md-8 fs-4">
-              Fundamos SushiRonin en el 2010, con la visión de unir los sabores y vibraciones únicos de Perú y Japón.
-
-Con un enfoque centrado en el uso de ingredientes de calidad y origen local, buscamos crear una experiencia premium para nuestros clientes.
+                Fundamos SushiRonin en el 2010, con la visión de unir los
+                sabores y vibraciones únicos de Perú y Japón. Con un enfoque
+                centrado en el uso de ingredientes de calidad y origen local,
+                buscamos crear una experiencia premium para nuestros clientes.
               </p>
             </div>
           </div>
