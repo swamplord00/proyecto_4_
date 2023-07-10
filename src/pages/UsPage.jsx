@@ -60,7 +60,7 @@ Con un enfoque centrado en el uso de ingredientes de calidad y origen local, bus
               </div>
             </div>
             <div className="col-md-6">
-              <div className="h-100 p-5 bg-body-tertiary border rounded-3">
+              <div className="h-100 p-5 bg-danger text-light border rounded-3">
                 <h2>Gastronomía Fusión</h2>
                 <p>
                   Surge del interés por llevar la experiencia de la comida

@@ -65,6 +65,8 @@ export const BookingPage = () => {
       <div className="card">
         <div className="card-body">Recomendamos hacer tu reserva en línea.</div>
       </div>
+
+      <div className="card p-5">
       <form onSubmit={onSubmit} className="form">
         <div className="mb-3">
           <label htmlFor="inputName" className="form-label">
@@ -128,6 +130,9 @@ export const BookingPage = () => {
           Submit
         </button>
       </form>
+
+      </div>
+      
       <div className="table-responsive-sm">
         <table className="table p-5 mt-5 ">
           <thead>
