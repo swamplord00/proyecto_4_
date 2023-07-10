@@ -71,8 +71,10 @@ export const HomePage = () => {
               />
               <div className="container">
                 <div className="carousel-caption text-left">
-                  <h1>Bienvenido a SushiRonin Restaurant</h1>
-                  <p>
+                    <div className="card bg-dark text-light p-5">
+
+                  <h1 >Bienvenido a SushiRonin Restaurant</h1>
+                  <p className="text-danger">
                     Regístrate y reserva tu mesa en línea.
                   </p>
                   <p>
@@ -85,6 +87,8 @@ export const HomePage = () => {
                       Reservas
                     </Link>
                   </p>
+
+                    </div>
                 </div>
               </div>
             </div>
