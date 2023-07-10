@@ -15,7 +15,7 @@ export const NavBar = ({ usuario, setUsuario }) => {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-body-secondary">
+      <nav className="navbar navbar-expand-lg bg-body-secondary ">
         <div className="container-fluid">
           <h4>SushiRonin</h4>
           <div className="container">
@@ -40,7 +40,7 @@ export const NavBar = ({ usuario, setUsuario }) => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0 align-items-center lp-1">
               <li className="nav-item">
                 <NavLink className="nav-link" aria-current="page" to="/">
                   Inicio
@@ -64,12 +64,16 @@ export const NavBar = ({ usuario, setUsuario }) => {
 
               {usuario ? (
                 <>
-                  <img
+                <li className="nav-item">
+                <img
                     src={usuario.photoURL}
                     alt="avatar"
                     className="rounded-circle img-fluid img-thumbnail "
                   />
-                  <li className="nav-item">{usuario.displayName}</li>
+                    <p className="fs-6 fst-light">
+                       {usuario.displayName} 
+                    </p>
+                </li>
                   <li className="nav-item" onClick={onLogOut}>
                     <a className="nav-link text-danger">Logout</a>
                   </li>
@@ -79,6 +83,7 @@ export const NavBar = ({ usuario, setUsuario }) => {
                   <a className="nav-link">Login</a>
                 </li>
               )}
+              
             </ul>
           </div>
         </div>
