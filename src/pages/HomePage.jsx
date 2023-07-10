@@ -12,7 +12,7 @@ export const HomePage = () => {
       <div className="card p-2">
 
       <div className="card bg-dark text-white">
-        <img src="/images/cr2.jpeg" className="card-img" alt="bg sushi" />
+        <img src="/images/cr4.jpeg" className="card-img" alt="bg sushi" />
         <div className="card-img-overlay">
           <h5 className="card-title">Bienvenido a SushiRonin Restaurant</h5>
           <p className="card-text">Inicia una sesión con tu email y reserva tu mesa en línea.</p>
@@ -26,7 +26,7 @@ export const HomePage = () => {
         <img src="/images/cr1.jpeg" className="card-img" alt="bg sushi" />
         <div className="card-img-overlay">
           <h5 className="card-title">Ven a visitarnos</h5>
-          <p className="card-text">¡Haz tu mesa en línea!</p>
+          <p className="card-text">¡Haz tu reserva en línea!</p>
           <button className="btn btn-info">
             <Link
               to="/reserva"
