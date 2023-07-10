@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <NavBar usuario={userState} setUsuario={setUserState}/>
-      <MainRouter/>
+      <MainRouter usuario={userState} setUsuario={setUserState}/> 
       <Footer/>
     </>
   )

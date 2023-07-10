@@ -5,7 +5,7 @@ import { db } from "../firebase/firebase";
 import { useEffect, useState } from "react";
 import { useTable } from "../hooks/useTable";
 
-export const BookingPage = () => {
+export const BookingPage = ({usuario,setUsuario}) => {
     
     const initialForm = {
         nombre: "",
@@ -133,7 +133,10 @@ export const BookingPage = () => {
 
       </div>
       
-      <div className="table-responsive-sm">
+       {
+            usuario?(
+
+                <div className="table-responsive-sm">
         <table className="table p-5 mt-5 ">
           <thead>
             <tr>
@@ -160,6 +163,13 @@ export const BookingPage = () => {
           </tbody>
         </table>
       </div>
+
+            ):(
+                <></>
+            )
+        }
+
+      
     </>
   );
 };

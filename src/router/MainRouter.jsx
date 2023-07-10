@@ -5,13 +5,13 @@ import { BookingPage } from "../pages/BookingPage"
 import { UsPage } from "../pages/UsPage"
 import { ProtectedRoutes } from "./ProtectedRoutes"
 
-export const MainRouter = () => {
+export const MainRouter = ({usuario,setUsuario}) => {
   return (
     <div className="container">
     <Routes>
         <Route path='/' element={<HomePage/>}/>  
         <Route path='/menu' element={<MenuPage/>}/>
-        <Route path='/reserva' element={<BookingPage/>}/> 
+        <Route path='/reserva' element={<BookingPage usuario={usuario} setUsuario={setUsuario}/>}/> 
         {/* <Route element={
             <ProtectedRoutes>
                 <Route path='/reserva' element={<BookingPage/>}/>   
