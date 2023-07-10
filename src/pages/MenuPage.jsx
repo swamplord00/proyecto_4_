@@ -71,7 +71,7 @@ export const MenuPage = () => {
               />
             </div>
 
-            <div className="card w-50 p-1 bg-secondary bg-gradient text-light">
+            <div className="card flex-fill p-1 bg-secondary bg-gradient text-light">
               <p>(40 piezas mixtas)</p>
               <p>Precio :$20.000</p>
               <ul>
@@ -94,7 +94,7 @@ export const MenuPage = () => {
                 alt="promo2"
               />
             </div>
-            <div className="card w-50 p-1 bg-secondary bg-gradient text-light">
+            <div className="card flex-fill p-1 bg-secondary bg-gradient text-light">
               <p>(60 piezas mixtas)</p>
               <p>Precio :$28.000</p>
               <ul>
@@ -135,7 +135,7 @@ export const MenuPage = () => {
                 alt="nigiri"
               />
             </div>
-            <div className="card w-50 p-1 bg-secondary bg-gradient text-light">
+            <div className="card flex-fill p-1 bg-secondary bg-gradient text-light">
               <p>(mix 8 piezas)</p>
               <p>Precio :$7.000</p>
             </div>
@@ -152,7 +152,7 @@ export const MenuPage = () => {
                 alt="avocado"
               />
             </div>
-            <div className="card w-50 p-1 bg-secondary bg-gradient text-light">
+            <div className="card flex-fill p-1 bg-secondary bg-gradient text-light">
               <p>(8 piezas pollo-queso envuelto en palta)</p>
               <p>Precio :$8.000</p>
             </div>
@@ -171,7 +171,7 @@ export const MenuPage = () => {
                 
               />
             </div>
-            <div className="card w-50 p-1 bg-secondary bg-gradient text-light">
+            <div className="card flex-fill p-1 bg-secondary bg-gradient text-light">
               <p>(8 piezas pollo teriyaki-queso-nori en tempura )</p>
               <p>Precio :$8.500</p>
             </div>
