@@ -16,45 +16,52 @@ export const BookingPage = () => {
     
     const { formState, handleInputChange, onResetForm, onEditForm } = useForm(initialForm);
     const { infoBookingArray, getDataForm } = useTable([]);
-    const [editId,setIdEdit]=useState("")
+    const [editId,setIdEdit]=useState('')
 
+    console.log(editId)
+
+    
+    
+    
+    
+    const onSubmit = async (eventSubmit) => {
+        eventSubmit.preventDefault();
+        
+        try {
+            if(editId===''){
+                await db.collection("reservas").add(formState);
+                console.log('nueva reserva')
+            }else{
+                await db.collection('reservas').doc(editId).update(formState)
+                console.log('reserva editada')
+            }
+            onResetForm();
+            setIdEdit('')
+            
+        } catch (error) {
+            console.log(error)
+        }
+    };
+    
+    const onDelete=async(id)=>{
+        await db.collection('reservas').doc(id).delete()
+    }
+    
+    const getBooking= async(id)=>{
+        setIdEdit(id)
+        console.log(id)
+        const doc= await db.collection('reservas').doc(id).get()
+        onEditForm({...doc.data()})
+        
+    }
     
     useEffect(() => {
       getDataForm();
       
     }, []);
-
-
-
-  const onSubmit = async (eventSubmit) => {
-    eventSubmit.preventDefault();
-    try {
-        if(editId===""){
-            await db.collection("reservas").add(formState);
-            onResetForm();
-        }else{
-            await db.collection('reservas').doc(editId).update(formState)
-            setIdEdit("")
-        }
-        
-    } catch (error) {
-        console.log(error)
-    }
-  };
-
-  const onDelete=async(id)=>{
-    await db.collection('reservas').doc(id).delete()
-  }
-
-  const getBooking= async(id)=>{
-    const doc= await db.collection('reservas').doc(id).get()
-    onEditForm({...doc.data()})
     
-  }
-
-
-  return (
-    <>
+    return (
+        <>
       <div className="card">
         <div className="card-body">Recomendamos hacer tu reserva en línea.</div>
       </div>
