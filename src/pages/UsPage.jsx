@@ -4,7 +4,7 @@ export const UsPage = () => {
   return (
     <>
       <main>
-        <div className="container py-4">
+        <div className=" card container py-4">
           <header className="pb-3 mb-4 border-bottom">
             <a
               href="/"
@@ -14,23 +14,18 @@ export const UsPage = () => {
             </a>
           </header>
 
-          <div className="p-5 mb-4 bg-body-tertiary rounded-3">
-            <div className="container-fluid py-5">
-              <h1 className="display-5 fw-bold">Historia</h1>
-              <div className="card">
-              <img src="/images/2.jpg" className="card-img" alt="bg sushi" />
-              <div className="card-img-overlay">
-
-              <p className=" card-text col-md-8 fs-4 text-light">
+          <div className=" card container d-flex flex-wrap mb-4 bg-body-tertiary rounded-3 p-1">
+            <img src="/images/bg.jpg" className="card-img " alt="bg sushi" />
+            <div className="card-img-overlay py-5">
+              <h1 className=" fw-bold  text-light p-1 ">
+                Historia
+              </h1>
+              <p className=" card-text col-md-8 fs-6 text-light">
                 Fundamos SushiRonin en el 2010, con la visión de unir los
                 sabores y vibraciones únicos de Perú y Japón. Con un enfoque
                 centrado en el uso de ingredientes de calidad y origen local,
                 buscamos crear una experiencia premium para nuestros clientes.
               </p>
-
-              </div>
-
-              </div>
             </div>
           </div>
 
