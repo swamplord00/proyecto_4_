@@ -2,30 +2,56 @@ import moment from "moment";
 
 import { useForm } from "../hooks/useForm";
 import { db } from "../firebase/firebase";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useTable } from "../hooks/useTable";
 
 export const BookingPage = () => {
-  const initialForm = {
-    nombre: "",
-    email: "",
-    fecha: "",
-    comensales: "",
-  };
+    
+    const initialForm = {
+        nombre: "",
+        email: "",
+        fecha: "",
+        comensales: "",
+    };
+    
+    const { formState, handleInputChange, onResetForm, onEditForm } = useForm(initialForm);
+    const { infoBookingArray, getDataForm } = useTable([]);
+    const [editId,setIdEdit]=useState("")
 
-  const { formState, handleInputChange, onResetForm } = useForm(initialForm);
-  const { infoBookingArray, getDataForm } = useTable([]);
+    
+    useEffect(() => {
+      getDataForm();
+      
+    }, []);
+
+
 
   const onSubmit = async (eventSubmit) => {
     eventSubmit.preventDefault();
-    await db.collection("reservas").add(formState);
-    onResetForm();
+    try {
+        if(editId===""){
+            await db.collection("reservas").add(formState);
+            onResetForm();
+        }else{
+            await db.collection('reservas').doc(editId).update(formState)
+            setIdEdit("")
+        }
+        
+    } catch (error) {
+        console.log(error)
+    }
   };
 
-  useEffect(() => {
-    getDataForm();
-    console.log(infoBookingArray);
-  }, []);
+  const onDelete=async(id)=>{
+    await db.collection('reservas').doc(id).delete()
+  }
+
+  const getBooking= async(id)=>{
+    const doc= await db.collection('reservas').doc(id).get()
+    onEditForm({...doc.data()})
+    
+  }
+
 
   return (
     <>
@@ -114,8 +140,8 @@ export const BookingPage = () => {
                 <td>{el.fecha}</td>
                 <td>{el.comensales}</td>
                 <td>
-                  <button className="btn btn-danger">Eliminar</button>
-                  <button className="btn btn-info">Editar</button>
+                  <button onClick={()=>onDelete(el.id)} className="btn btn-danger">Eliminar</button>
+                  <button onClick={()=>getBooking(el.id)} className="btn btn-info">Editar</button>
                 </td>
               </tr>
             ))}

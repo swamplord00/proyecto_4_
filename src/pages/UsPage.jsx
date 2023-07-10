@@ -41,10 +41,13 @@ export const UsPage = () => {
               <div className="h-100 p-5 bg-body-tertiary border rounded-3">
                 <h2>Gastronomía Fusión</h2>
                 <p>
-                  Or, keep it light and add a border for some added definition
-                  to the boundaries of your content. Be sure to look under the
-                  hood at the source HTML here as we've adjusted the alignment
-                  and sizing of both column's content for equal-height.
+                Surge del interés por llevar la experiencia de la comida asiática con fusion peruana-japonesa en un grato ambiente para que puedas asistir en familia o con amigos.
+
+Creemos en entregar variada carta donde podrás encontrar rolls, platos fuertes, picoteos fríos y calientes, coctelería especializada y tablas para compartir. Además de maravillosos postres para endulzar tu vida.
+
+Nuestro principal objetivo es poder disfrutar de distintos platos en un mismo lugar.
+
+¡Ven y vive la mejor experiencia de comida asiática en SushiRonin!
                 </p>
                 <button className="btn btn-outline-secondary" type="button">
                   Example button

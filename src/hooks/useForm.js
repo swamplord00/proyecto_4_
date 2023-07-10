@@ -14,7 +14,9 @@ export const useForm = ( initialForm = {} ) => {
         console.log(formState)
     };
 
-
+    const onEditForm=(editBook)=>{
+        setFormState(editBook)
+    }
 
     const onResetForm = () => {
 
@@ -31,7 +33,9 @@ export const useForm = ( initialForm = {} ) => {
 
         onResetForm,
 
-        handleInputChange
+        handleInputChange,
+        
+        onEditForm
 
     };
 
