@@ -47,8 +47,8 @@ export const Footer = () => {
             <p className="text-light">Antofagasta</p>
             <p className="text-light">Fono: +11 96969696</p>
           </div>
-          <div className="map-area flex-fill">
-            <iframe
+          <div className="map-area flex-fill w-100 h-100">
+            <iframe className="w-100 h-100"
               allowFullScreen
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24176.994922677593!2d-73.90202769957703!3d40.759289326895654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25fa191b4692b%3A0xe573e64fb17e324a!2sJackson%20Heights%2C%20Queens%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1643211772666!5m2!1sen!2sbd"
             ></iframe>

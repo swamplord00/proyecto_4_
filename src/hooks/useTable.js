@@ -3,7 +3,7 @@ import { useState } from "react";
 import React from 'react'
 import { db } from "../firebase/firebase";
 
-export const useTable = (initialArray=[]) => {
+export const useTable = (initialArray=[],userId) => {
     const [infoBookingArray,setInfoBookingArray]=useState(initialArray)
 
     const getDataForm=async()=>{
@@ -12,8 +12,9 @@ export const useTable = (initialArray=[]) => {
         querySnapshot.forEach((book)=>{
             booking.push({...book.data(), id:book.id})
         })
-        setInfoBookingArray(booking)
-        console.log(booking)
+        const filteredBooking=booking.filter((el)=>el.userId===userId)
+        setInfoBookingArray(filteredBooking)
+        console.log(filteredBooking)
         console.log(infoBookingArray)
         })
     }

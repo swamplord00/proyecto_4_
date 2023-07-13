@@ -11,11 +11,14 @@ export const BookingPage = ({ usuario, setUsuario }) => {
     email: "",
     fecha: "",
     comensales: "",
+    userId:""
   };
+ 
+
 
   const { formState, handleInputChange, onResetForm, onEditForm } =
     useForm(initialForm);
-  const { infoBookingArray, getDataForm } = useTable([]);
+  const { infoBookingArray, getDataForm } = useTable([],usuario?.uid);
   const [editId, setIdEdit] = useState("");
 
   console.log(editId);
@@ -25,10 +28,10 @@ export const BookingPage = ({ usuario, setUsuario }) => {
 
     try {
       if (editId === "") {
-        await db.collection("reservas").add(formState);
+        await db.collection("reservas").add({...formState,userId:usuario.uid});
         console.log("nueva reserva");
       } else {
-        await db.collection("reservas").doc(editId).update(formState);
+        await db.collection("reservas").doc(editId).update({...formState,userId:usuario.uid});
         console.log("reserva editada");
       }
       onResetForm();
@@ -51,7 +54,7 @@ export const BookingPage = ({ usuario, setUsuario }) => {
 
   useEffect(() => {
     getDataForm();
-  }, []);
+  }, [usuario]);
 
   return (
     <>
