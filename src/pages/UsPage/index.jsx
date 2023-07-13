@@ -1,4 +1,5 @@
 import React from "react";
+import './style/index.css'
 
 export const UsPage = () => {
   return (
@@ -14,13 +15,13 @@ export const UsPage = () => {
             </a>
           </header>
 
-          <div className=" card container d-flex flex-wrap mb-4 bg-body-tertiary rounded-3 p-1">
-            <img src="/images/bg.jpg" className="card-img " alt="bg sushi" />
+          <div className=" card container d-flex flex-wrap mb-4 bg-body-tertiary rounded-3 p-1 mh-25">
+            <img src="/images/historia.jpeg" className="card-img mh-50 img-fluid object-fit-cover" alt="bg sushi" />
             <div className="card-img-overlay py-5">
-              <h1 className=" fw-bold  text-light p-1 ">
+              <h1 className=" fw-bold  text-light p-1 md-fs-25 selector-card selector-card-h1"> 
                 Historia
               </h1>
-              <p className=" card-text col-md-8 fs-6 text-light">
+              <p className=" card-text col-md-8 fs-25 text-light md-fs-25 selector-card">
                 Fundamos SushiRonin en el 2010, con la visión de unir los
                 sabores y vibraciones únicos de Perú y Japón. Con un enfoque
                 centrado en el uso de ingredientes de calidad y origen local,

@@ -1,0 +1,36 @@
+@media (min-width: 468px) {
+    .selector-card {
+      padding: calc(1.325rem + 0.9vw);
+      font-size: 1.2rem; /* 1.125rem is small enough, so RFS won't rescale this */
+    }
+    .selector-card-h1{
+        padding-left: calc(2rem + 0.5vw);
+    }
+  }
+  @media (min-width: 768px) {
+    .selector-card {
+      padding: calc(1.325rem + 0.9vw);
+      font-size: 1.5rem; /* 1.125rem is small enough, so RFS won't rescale this */
+    }
+    .selector-card-h1{
+        padding: calc(1.5rem + 0.9vw);
+    }
+  }
+  @media (min-width: 1024px) {
+    .selector-card {
+      padding: calc(1.325rem + 0.9vw);
+      font-size: 2rem; /* 1.125rem is small enough, so RFS won't rescale this */
+    }
+    .selector-card-h1{
+        padding: calc(1.5rem + 0.9vw);
+    }
+  }
+  @media (min-width: 1200px) {
+    .selector-card {
+      padding: calc(1.325rem + 0.9vw);
+      font-size: 3rem; /* 1.125rem is small enough, so RFS won't rescale this */
+    }
+    .selector-card-h1{
+        padding: calc(1.5rem + 0.9vw);
+    }
+  }
